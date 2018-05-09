@@ -76,5 +76,5 @@ class StoreTest(BaseTest):
                 r = c.get('/stores')
 
                 self.assertDictEqual(
-                    d1={'stores': [{'name': 'test', 'id': 1, 'items': [{'name': 'test', 'price': 17.99}]}]},
+                    d1={'stores': [{'name': 'test', 'id': 1, 'items': [{'id': 1, 'name': 'test', 'price': 17.99}]}]},
                     d2=json.loads(r.data.decode()))
